@@ -6,7 +6,7 @@ paoding-rose popo
 
 ================
 昨天自己完了一下gradle，顺便把自己编译好的包共享下：
-编译好的jar包下载地址：http://vdisk.weibo.com/s/APqiCCplT1cA
+编译好的jar包下载地址：http://vdisk.weibo.com/s/APqiCCplTiou
 ================
 
 
