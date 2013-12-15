@@ -1,4 +1,6 @@
-
+tasks.withType(Compile) {
+    options.encoding = "UTF-8"
+}
 subprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
@@ -7,7 +9,7 @@ subprojects {
     group = "net.paoding"
     version = "1.2-SNAPSHOT"
 
-    sourceCompatibility = 1.6
+    sourceCompatibility = 1.7
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
     repositories {
@@ -38,7 +40,7 @@ project(':rose') {
     dependencies {
         compile project(':context')
            testCompile "junit:junit:4.7"
-           compile "javax.servlet:servlet-api:2.4"
+           compile "javax.servlet:javax.servlet-api:3.0.1"
            compile "commons-logging:commons-logging:1.1.1"
            compile "commons-lang:commons-lang:2.6"
            compile "commons-collections:commons-collections:3.2.1"
@@ -59,7 +61,7 @@ project(':context') {
     archivesBaseName = "paoding-rose-context"
     dependencies {
         testCompile "junit:junit:4.7"
-        compile "javax.servlet:servlet-api:2.4"
+        compile "javax.servlet:javax.servlet-api:3.0.1"
         compile "commons-logging:commons-logging:1.1.1"
         compile "commons-lang:commons-lang:2.6"
         compile "commons-collections:commons-collections:3.2.1"
@@ -73,7 +75,7 @@ project(':jade') {
     dependencies {
         compile project(':context')
         testCompile "junit:junit:4.7"
-        compile "javax.servlet:servlet-api:2.4"
+        compile "javax.servlet:javax.servlet-api:3.0.1"
         compile "commons-logging:commons-logging:1.1.1"
         compile "commons-lang:commons-lang:2.6"
         compile "commons-jexl:commons-jexl:1.1"
@@ -89,9 +91,8 @@ project(':pipe') {
     dependencies {
         compile project(':rose')
         testCompile "junit:junit:4.7"
-        compile "javax.servlet:servlet-api:2.4"
+        compile "javax.servlet:javax.servlet-api:3.0.1"
         compile "javax.servlet:jsp-api:2.0"
         compile "com.metaparadigm:json-rpc:1.0"
     }
 }
-
